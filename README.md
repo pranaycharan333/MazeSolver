@@ -1,49 +1,23 @@
-# Round 2 — Maze Solver
+Maze Solver
 
-You are writing the brain of a small two-wheeled robot dropped into a maze it has
-never seen. Get it to the goal.
 
-## What's in here
+
 
 | File | What it is |
 |---|---|
-| `robot.py` | **Your submission.** The only file you edit. |
-| `CONTRACT.md` | Everything your robot can sense and do. Read this first — it is short, and it is the whole ruleset. |
+| `robot.py` |
+| `CONTRACT.md` | Everything  robot can sense and do. |
 | `selftest.py` | Run before submitting. Catches broken plumbing. |
-| `play.py` | Watch your robot solve a maze, step by step, in a small window. |
-| `sim_lite.py` | Powers `play.py`. You don't need to read or edit it. |
+| `play.py` | Watch  robot solve a maze, step by step, in a small window. |
+| `sim_lite.py` | Powers `play.py`. |
 | `mazes/` | The 3 practice mazes, as plain text. |
 
-## Start here
 
-1. Read `CONTRACT.md`. All of it. It takes five minutes and it is the entire game.
-2. Open `robot.py`. You edit one function: `decide()`. Everything below the
-   `DO NOT EDIT` line handles talking to the grader — leave it alone.
-3. What's already in `decide()` is a right-hand wall follower. It works, and it will
-   solve the easy mazes. It will not win: it has no memory, so it never learns the
-   maze, walks the same long way round every time, and can loop forever in an open
-   room. Improving on it is the exercise.
-4. Write your logic, then **watch it run** — see the next section.
-5. Before you submit: `python selftest.py robot.py`
 
----
 
-## Testing your solution
 
-### Step 1 — write your code
 
-Put your logic inside the `decide()` function in **`robot.py`**. That is the only
-file you edit, and the only file you submit.
-
-### Step 2 — open a terminal in this folder
-
-You need to be *inside* the `student_kit` folder for these commands to work:
-
-```
-cd path/to/student_kit
-```
-
-### Step 3 — run the visualizer
+run the visualizer
 
 ```
 python play.py
@@ -58,14 +32,14 @@ If `python` isn't recognised, try:
 
 A window opens.
 
-### Step 4 — pick a maze, then hit Run
+pick a maze, then hit Run
 
 1. Choose a maze from the **dropdown** at the top (`p01.txt`, `p02.txt`, `p03.txt`).
-2. Click **Run**. Your robot runs against that maze — this takes a second or two.
+2. Click **Run**.  robot runs against that maze — this takes a second or two.
 3. The maze appears: grey walls, a green dot where you start, a red ring at the goal,
    and a blue triangle showing your robot and which way it's facing.
 
-### Step 5 — watch the replay
+ watch the replay
 
 Use the buttons along the bottom:
 
@@ -81,7 +55,7 @@ action it chose, and the exact sensor values it saw. **This is the useful part**
 your robot does something stupid, step to that tick and look at what it was actually
 sensing when it decided.
 
-### Step 6 — read the result
+read the result
 
 Bottom right tells you `SOLVED` (with ticks used and collisions) or `NOT SOLVED` with a
 reason. If something broke, a message explains what — and if it can't tell what went
@@ -95,7 +69,7 @@ import sys
 print("my robot thinks x =", x, file=sys.stderr)
 ```
 
-### Step 7 — check it before submitting
+ check it before submitting
 
 ```
 python selftest.py robot.py
@@ -130,17 +104,6 @@ Note that `play.py` deliberately does **not** score you or tell you the shortest
 route — only the grader knows those. Locally, judge yourself by comparing your own runs
 against each other; for a real score, upload.
 
-## Submitting
-
-Rename `robot.py` to your team id — `team17.py` — and upload it to the website.
-
-One file. Python 3, standard library only. No `pip install`, no extra files, no
-internet at runtime.
-
-## Reading the maze files
-
-`mazes/` contains the practice layouts so you can see what you are up against. Your
-robot never receives these — it only ever gets sensor readings.
 
 ```
 !name: p02            <- lines starting with ! are settings, not part of the grid
