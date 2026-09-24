@@ -5,7 +5,7 @@ Maze Solver
 
 | File | What it is |
 |---|---|
-| `robot.py` |
+| `robot.py` | Main Brain |
 | `CONTRACT.md` | Everything  robot can sense and do. |
 | `selftest.py` | Run before submitting. Catches broken plumbing. |
 | `play.py` | Watch  robot solve a maze, step by step, in a small window. |
